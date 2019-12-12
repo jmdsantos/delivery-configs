@@ -6,6 +6,8 @@ eureka:
     hostname: localhost
     port: 9091
   client:
+    healthcheck:
+      enabled: true
     registerWithEureka: true
     fetchRegistry: false
     serviceUrl:
