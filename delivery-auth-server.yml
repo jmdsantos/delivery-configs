@@ -42,4 +42,4 @@ spring:
             ddl-auto: create
         show-sql: true
     main:
-        allow-bean-definition-overriding: true
+        allow-bean-definition-overriding: false
