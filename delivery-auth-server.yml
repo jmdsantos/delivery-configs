@@ -36,7 +36,7 @@ spring:
         username: root
     jpa:
         database-platform: org.hibernate.dialect.MySQL57Dialect
-        generate-ddl: true
+        generate-ddl: false
         hibernate:
             ddl-auto: create
         show-sql: true
