@@ -39,7 +39,5 @@ spring:
         database-platform: org.hibernate.dialect.MySQL57Dialect
         generate-ddl: false
         hibernate:
-            ddl-auto: none
+            ddl-auto: create
         show-sql: true
-    main:
-        allow-bean-definition-overriding: true
