@@ -40,5 +40,5 @@ spring:
         database: MYSQL
         generate-ddl: true
         hibernate:
-            ddl-auto: none
+            ddl-auto: create
         show-sql: true
