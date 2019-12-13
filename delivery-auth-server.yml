@@ -9,7 +9,7 @@ eureka:
   client:
     healthcheck:
       enabled: true
-    register-with-eureka: false
+    register-with-eureka: true
     fetch-registry: true
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
