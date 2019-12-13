@@ -1,13 +1,20 @@
+info:
+  component: Eureka Server
+
 server:
   port: 9091
 
 eureka:
   instance:
     hostname: localhost
+    lease-expiration-duration-in-seconds: 15
+    lease-renewal-interval-in-seconds: 5
   client:
-    registerWithEureka: true
+    registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
+    enable-self-preservation: false
+    waitTimeInMsWhenSyncEmpty: 0
     wait-time-in-ms-when-sync-empty: 3000 
