@@ -35,8 +35,10 @@ spring:
         url: jdbc:mysql://localhost:3306/oauth?createDatabaseIfNotExist=true&verifyServerCertificate=false&useSSL=false&requireSSL=false&allowMultiQueries=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
         username: root
     jpa:
+
         database-platform: org.hibernate.dialect.MySQL57Dialect
-        generate-ddl: false
+        database: MYSQL
+        generate-ddl: true
         hibernate:
-            ddl-auto: create
+            ddl-auto: none
         show-sql: true
