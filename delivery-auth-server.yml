@@ -13,8 +13,6 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
-    healthcheck:
-        enabled: true
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
