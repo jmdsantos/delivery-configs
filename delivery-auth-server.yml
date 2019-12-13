@@ -26,17 +26,18 @@ security:
             scope: read,write
 
 spring:
-    datasource:
-        data: classpath:/sql/data.sql
+    datasource:        
         driver-class-name: com.mysql.cj.jdbc.Driver
+        username: root
         password: 
         platform: mysql
         schema: classpath:/sql/schema.sql
-        url: jdbc:mysql://localhost/oauth?verifyServerCertificate=false&useSSL=false&requireSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-        username: root
+        data: classpath:/sql/data.sql
+        url: jdbc:mysql://localhost/oauth?useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+        
     jpa:
         database-platform: org.hibernate.dialect.MySQLDialect
-        generate-ddl: true
+        generate-ddl: false
         hibernate:
             ddl-auto: none
         show-sql: true
