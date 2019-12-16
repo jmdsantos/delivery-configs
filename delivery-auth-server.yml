@@ -45,6 +45,4 @@ spring:
     jpa:
         database-platform: org.hibernate.dialect.MySQL57Dialect
         generate-ddl: true
-        hibernate:
-            ddl-auto: create
         show-sql: true
