@@ -8,9 +8,38 @@ eureka:
   client:
     healthcheck:
       enabled: true
+    lease:
+      duration: 5
     register-with-eureka: false
     fetch-registry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
   server:
     wait-time-in-ms-when-sync-empty: 60000
+
+security:
+    oauth2:
+        client:
+            access-token-validity-seconds: 1800
+            authorized-grant-types: password,refresh_token
+            client-id: coderef
+            client-secret: $2a$10$p9Pk0fQNAQSesI4vuvKA0OZanDD2
+            resource-ids: resources
+            scope: read,write
+
+spring:
+    datasource:  
+        data: classpath:/sql/data.sql      
+        driver-class-name: com.mysql.cj.jdbc.Driver        
+        password: 
+        platform: mysql
+        schema: classpath:/sql/schema.sql        
+        url: jdbc:mysql://localhost:3306/oauth?createDatabaseIfNotExist=true&verifyServerCertificate=false&useSSL=false&requireSSL=false&allowMultiQueries=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+        username: root
+    jpa:
+        database-platform: org.hibernate.dialect.MySQL57Dialect
+        database: MYSQL
+        generate-ddl: false
+        hibernate:
+            ddl-auto: none
+        show-sql: true
