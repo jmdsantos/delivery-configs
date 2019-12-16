@@ -21,7 +21,7 @@ eureka:
 
 logging:
   level:
-    com.coderef.delivery: DEBUG
+    c.c.d.DeliveryAuthServerApplication: DEBUG
     
 security:
     oauth2:
