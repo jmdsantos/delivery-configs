@@ -12,8 +12,8 @@ eureka:
       enabled: true
     lease:
       duration: 5
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: true
+    fetch-registry: true
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
   server:
@@ -21,8 +21,8 @@ eureka:
 
 logging:
   level:
-    c.c.d.DeliveryAuthServerApplication: DEBUG
-    
+    com.coderef.delivery: DEBUG
+
 security:
     oauth2:
         client:
@@ -44,8 +44,7 @@ spring:
         username: root
     jpa:
         database-platform: org.hibernate.dialect.MySQL57Dialect
-        database: MYSQL
-        generate-ddl: false
+        generate-ddl: true
         hibernate:
-            ddl-auto: none
+            ddl-auto: create
         show-sql: true
