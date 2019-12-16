@@ -5,6 +5,8 @@ eureka:
   instance:
     hostname: localhost
     port: 9091
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
   client:
     healthcheck:
       enabled: true
@@ -17,6 +19,10 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 60000
 
+logging:
+  level:
+    com.coderef.delivery: DEBUG
+    
 security:
     oauth2:
         client:
