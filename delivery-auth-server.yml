@@ -34,7 +34,6 @@ security:
             scope: read,write
 
 spring:
-    cloud:refrec
     datasource:  
         data: classpath:/sql/data-oauth.sql      
         driver-class-name: com.mysql.cj.jdbc.Driver        
