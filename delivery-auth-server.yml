@@ -36,7 +36,7 @@ security:
 spring:
     datasource:  
         data: classpath:/sql/data-oauth.sql      
-        driver-class-name: com.mysql.cj.jdbc.Driver        
+        driver-class-name: org.mariadb.jdbc.Driver       
         password: 
         hikari:
             minimum-idle: 1
@@ -48,4 +48,6 @@ spring:
     jpa:
         database-platform: org.hibernate.dialect.MySQL57Dialect
         generate-ddl: true
+        hibernate:
+            ddl-auto: create-drop
         show-sql: true
