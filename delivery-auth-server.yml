@@ -8,6 +8,8 @@ eureka:
   client:
     healthcheck:
       enabled: true
+    lease:
+      duration: 5
     register-with-eureka: true
     fetch-registry: false
     serviceUrl:
