@@ -31,7 +31,7 @@ security:
 
 spring:
     datasource:  
-        initialize: true
+        initialization-mode: always 
         data: classpath:/sql/data-oauth.sql      
         driver-class-name: org.mariadb.jdbc.Driver       
         password: 
