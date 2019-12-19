@@ -5,19 +5,15 @@ eureka:
   instance:
     hostname: localhost
     port: 9091
-    leaseRenewalIntervalInSeconds: 1
-    leaseExpirationDurationInSeconds: 2
   client:
     healthcheck:
       enabled: true
-    lease:
-      duration: 60000
     register-with-eureka: true
     fetch-registry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
   server:
-    wait-time-in-ms-when-sync-empty: 60000
+    wait-time-in-ms-when-sync-empty: 3000
 
 logging:
   level:
@@ -26,7 +22,7 @@ logging:
 security:
     oauth2:
         client:
-            access-token-validity-seconds: 60000
+            access-token-validity-seconds: 1800
             authorized-grant-types: password,refresh_token
             client-id: coderef
             client-secret: $2a$10$p9Pk0fQNAQSesI4vuvKA0OZanDD2
@@ -48,7 +44,7 @@ spring:
         username: root
     jpa:
         database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-        generate-ddl: true
+        generate-ddl: update
         hibernate:
-            ddl-auto: create-drop
+            ddl-auto: create
         show-sql: true
