@@ -1,9 +1,5 @@
 server:
   port: 9092
-  ssl:
-    enabled: false
-  tomcat:
-    max-http-header-size: 3145728
 
 eureka:
   instance:
